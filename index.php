@@ -10,7 +10,6 @@ body {
 .menu {
     margin-bottom: 20px;
 }
-
 .menu-button {
     display: inline-block;
     padding: 10px 20px;
@@ -22,46 +21,37 @@ body {
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
-
 .menu-button:hover {
     background-color: #0056b3;
 }
-
 .menu-button.active {
     background-color: #dc3545;
 }
-
 h2 {
     color: #222;
     margin-bottom: 15px;
 }
-
 table {
     width: 100%;
     border-collapse: collapse;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
 table th, table td {
     padding: 12px 15px;
     border: 1px solid #ddd;
     text-align: left;
 }
-
 table th {
     background-color: #f4f6f8;
     font-weight: 700;
 }
-
 table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
-
 table tr:hover {
     background-color: #e9f2ff;
 }
-
 form {
     background: #fff;
     padding: 20px;
@@ -69,13 +59,11 @@ form {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
 form label {
     display: block;
     margin-bottom: 10px;
     font-weight: 600;
 }
-
 form input[type="text"],
 form input[type="date"],
 form select {
@@ -89,14 +77,12 @@ form select {
     margin-bottom: 15px;
     transition: border-color 0.3s ease;
 }
-
 form input[type="text"]:focus,
 form input[type="date"]:focus,
 form select:focus {
     border-color: #007BFF;
     outline: none;
 }
-
 form input[type="submit"] {
     background-color: #007BFF;
     color: white;
@@ -107,15 +93,12 @@ form input[type="submit"] {
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
-
 form input[type="submit"]:hover {
     background-color: #0056b3;
 }
-
 .pagination {
     margin-top: 20px;
 }
-
 .pagination a,
 .pagination strong {
     display: inline-block;
@@ -126,24 +109,20 @@ form input[type="submit"]:hover {
     border: 1px solid transparent;
     font-weight: 600;
 }
-
 .pagination a {
     color: #007BFF;
     border-color: #007BFF;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .pagination a:hover {
     background-color: #007BFF;
     color: white;
 }
-
 .pagination strong {
     background-color: #007BFF;
     color: white;
     border-color: #007BFF;
 }
-
 @media (max-width: 600px) {
     body {
         padding: 10px;
@@ -160,15 +139,9 @@ form input[type="submit"]:hover {
 </style>
 
 <?php
-// Главный файл контроллера
-
-// Подключение модуля с меню
 include 'menu.php';
-
-// Определяем действие из GET-параметров
 $action = isset($_GET['action']) ? $_GET['action'] : 'view';
 
-// Подключаем соответствующий модуль
 switch ($action) {
     case 'view':
         include 'viewer.php';
